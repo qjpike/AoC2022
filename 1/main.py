@@ -7,8 +7,6 @@ def get_input():
                 inp.append(0)
             else:
                 inp.append(int(i))
-            # inp.append(i.strip())
-            # inp.append(i.split())
 
     return inp
 
