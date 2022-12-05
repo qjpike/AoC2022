@@ -17,10 +17,6 @@ starts.append(deque(['Z', 'B', 'P', 'M', 'Q', 'F', 'S', 'H']))
 starts.append(deque(['W', 'L', 'F']))
 starts.append(deque(['S', 'V', 'F', 'M', 'R']))
 
-def move(start, end):
-    end.append(start.popleft())
-
-
 for i in dat:
     command = i.split()
     for j in range(int(command[1])):
@@ -31,7 +27,6 @@ for i in starts:
 print()
 
 starts = list()
-
 starts.append(deque(['D', 'B', 'J', 'V']))
 starts.append(deque(['P', 'V', 'B', 'W', 'R', 'D', 'F']))
 starts.append(deque(['R', 'G', 'F', 'L', 'D', 'C', 'W', 'Q']))
