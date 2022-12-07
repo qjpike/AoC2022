@@ -28,7 +28,6 @@ with open("input.txt") as f:
     for i in f.readlines():
         dat.append(i.split())
 
-
 cur_folder = top_folder = Folder('/', None)
 for i in dat:
     if i[0].isnumeric():
@@ -48,15 +47,17 @@ from collections import deque
 top_folder.find_size()
 
 next = deque(top_folder.subfolders.values())
-small_folders = []
-best_folder = 40000000000000
+small_folders_size = 0
+best_folder = 70000000
 needed = 30000000 - (70000000 - top_folder.size)
 while len(next) > 0:
     temp = next.popleft()
     if temp.size <= 100000:
-        small_folders.append(temp.size)
+        small_folders_size += temp.size
     next += temp.subfolders.values()
     if needed < temp.size < best_folder:
         best_folder = temp.size
-print(sum(small_folders))
-print(best_folder)
+
+
+print("1:", small_folders_size)
+print("2:", best_folder)
