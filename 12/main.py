@@ -45,7 +45,7 @@ def find_dist(start, end, field):
         return 10000000
 
 
-print("1:", find_dist(s, e, f) )
+print("1:", find_dist(s, e, f))
 
 # probably a better way to do part 2. Takes a few seconds.
 # my guess is that we have to go from E backwards.
